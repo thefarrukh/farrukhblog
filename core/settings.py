@@ -12,8 +12,6 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 
-from django.conf.global_settings import INSTALLED_APPS, MEDIA_ROOT
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -22,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-u8r+uzv&3+=7ivivi4de1tamzx(%z3-z%=*dg_$3l(c^lm-fqr'
+SECRET_KEY = 'django-insecure-n!)#ynw^#=-)_8+*m-kq&h8epif+j+1pszk9y=6=jwes9r3)(e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -41,11 +39,15 @@ DEFAULT_APPS = [
     'django.contrib.staticfiles',
 ]
 
+EXTERNAL_APPS = [
+    'rest_framework',
+]
+
 LOCAL_APPS = [
     'posts',
 ]
 
-INSTALLED_APPS = DEFAULT_APPS + LOCAL_APPS
+INSTALLED_APPS = DEFAULT_APPS + LOCAL_APPS + EXTERNAL_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
